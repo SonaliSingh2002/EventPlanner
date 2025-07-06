@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_10sdp"
+    android:background="@color/white"
+    tools:context=".view.AddEditEventActivity">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/main"
+        android:orientation="vertical">
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_minus20sdp"
+            layout="@layout/toolbar"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:fontFamily="sans-serif-light"
+            android:background="@drawable/stroke_curve"
+            android:hint="Title"
+            android:inputType="text"
+            android:textSize="@dimen/_12ssp"
+            android:textColorHint="@color/grey"
+            android:textColor="@color/black"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Description"
+            android:padding="@dimen/_10sdp"
+            android:fontFamily="sans-serif"
+            android:background="@drawable/stroke_curve"
+            android:inputType="textMultiLine"
+            android:textSize="@dimen/_12ssp"
+            android:textColorHint="@color/grey"
+
+            android:textColor="@color/black"
+            android:minLines="3"
+            android:layout_marginBottom="@dimen/_10sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSelectTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/curve_bg"
+            android:text="Select Time"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/_13ssp"
+            android:layout_marginBottom="16dp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSave"
+            android:textColor="@color/white"
+            android:background="@drawable/curve_bg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-medium"
+            android:textSize="@dimen/_13ssp"
+            android:text="Save Event" />
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</ScrollView>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_20ssp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:text="Event Planner"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:fontFamily="sans-serif-black"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_11ssp"
+        android:text="Plan your events with Event Planner App"
+        android:gravity="center"
+        android:textColor="@color/grey"
+        android:fontFamily="sans-serif-light"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

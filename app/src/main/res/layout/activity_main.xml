@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/white"
+    android:paddingBottom="@dimen/_20sdp"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp">
+
+            <include
+                layout="@layout/toolbar"/>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                app:dividerColor="@color/grey"
+                android:visibility="gone"
+                android:layout_marginVertical="@dimen/_10sdp"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginHorizontal="@dimen/_5sdp"
+                android:hint="Select Date"
+                 app:hintTextColor="@color/grey"
+                android:textColorHint="@color/black">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/dateEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:textColor="@color/black"
+                    android:drawableEnd="@drawable/calender"
+                    android:paddingEnd="@dimen/_10sdp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <!--  <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/dateEditText"
+                    android:background="@drawable/stroke_curve"
+                    android:text="Select Date"
+                    android:textSize="@dimen/_12sdp"
+                    android:padding="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:focusable="false"
+                    android:inputType="none"
+                    android:drawableEnd="@drawable/calender"
+                    android:paddingEnd="@dimen/_10sdp" />-->
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvNoEvents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No events today."
+                android:textAlignment="center"
+                android:textColor="@android:color/black"
+                android:visibility="gone"
+                android:layout_marginTop="8dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                tools:listitem="@layout/event_items"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:clipToPadding="false" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:contentDescription="Add Event"
+        android:src="@drawable/plus"
+        android:tint="@color/white"
+        app:backgroundTint="@android:color/black" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
