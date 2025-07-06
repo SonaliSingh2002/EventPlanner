@@ -1,19 +1,14 @@
-package com.eventplanner.view
+package com.eventplanner.view.edit_event
 
 import android.app.TimePickerDialog
 import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
-import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
-import com.eventplanner.EventViewModel
-import com.eventplanner.R
 import com.eventplanner.base.BaseActivity
 import com.eventplanner.databinding.ActivityAddEditEventBinding
-import com.eventplanner.databinding.ActivityMainBinding
-import com.eventplanner.room_db.Event
+import com.eventplanner.model.Event
+import com.eventplanner.viewmodel.EventViewModel
 import java.text.SimpleDateFormat
 import java.util.Calendar
 import java.util.Date
@@ -104,31 +99,5 @@ class AddEditEventActivity : BaseActivity() {
         }
 
         finish()
-    }
-
-   /* private fun saveEvent() {
-        val title = binding.etTitle.text.toString().trim()
-        val description = binding.etDescription.text.toString().trim()
-
-        if (title.isEmpty() || description.isEmpty() || selectedTime.isEmpty()) {
-            Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
-            return
-        }
-
-        val event = Event(
-            title = title,
-            description = description,
-            date = selectedDate,
-            time = selectedTime
-        )
-
-        viewModel.insert(event)
-        Toast.makeText(this, "Event saved", Toast.LENGTH_SHORT).show()
-        finish()
-    }*/
-
-    private fun getTodayDate(): String {
-        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
-        return sdf.format(Date())
     }
 }

@@ -1,4 +1,4 @@
-package com.eventplanner.room_db
+package com.eventplanner.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey

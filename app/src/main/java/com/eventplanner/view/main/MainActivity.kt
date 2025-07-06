@@ -1,4 +1,4 @@
-package com.eventplanner.view
+package com.eventplanner.view.main
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -9,14 +9,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.widget.AppCompatEditText
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.eventplanner.EventAdapter
-import com.eventplanner.EventViewModel
+import com.eventplanner.view.EventAdapter
 import com.eventplanner.R
 import com.eventplanner.base.BaseActivity
 import com.eventplanner.databinding.ActivityMainBinding
-import com.eventplanner.room_db.Event
-import com.google.android.material.datepicker.CalendarConstraints
-import com.google.android.material.datepicker.DateValidatorPointBackward
+import com.eventplanner.model.Event
+import com.eventplanner.view.edit_event.AddEditEventActivity
+import com.eventplanner.viewmodel.EventViewModel
 import com.google.android.material.datepicker.MaterialDatePicker
 import java.text.SimpleDateFormat
 import java.util.Date

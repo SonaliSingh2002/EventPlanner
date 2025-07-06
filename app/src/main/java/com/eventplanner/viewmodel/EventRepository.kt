@@ -1,7 +1,7 @@
-package com.eventplanner
+package com.eventplanner.viewmodel
 
 import androidx.lifecycle.LiveData
-import com.eventplanner.room_db.Event
+import com.eventplanner.model.Event
 import com.eventplanner.room_db.EventDao
 
 class EventRepository(private val dao: EventDao) {

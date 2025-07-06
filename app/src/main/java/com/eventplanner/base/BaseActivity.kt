@@ -22,6 +22,11 @@ open class BaseActivity : AppCompatActivity() {
         }
     }
 
+    fun getTodayDate(): String {
+        val sdf = SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
+        return sdf.format(Date())
+    }
+
     fun getCurrentDate(): String {
         val format = "yyyy-MM-dd"
         val sdf = SimpleDateFormat(format, Locale.getDefault())

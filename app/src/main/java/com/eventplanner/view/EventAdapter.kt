@@ -1,12 +1,21 @@
-package com.eventplanner
+package com.eventplanner.view
 
-/*
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import androidx.appcompat.widget.AppCompatTextView
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.eventplanner.R
+import com.eventplanner.model.Event
+
 class EventAdapter(
     private val onItemClick: (Event) -> Unit,
     private val onItemLongClick: (Event) -> Unit
 ) : ListAdapter<Event, EventAdapter.EventViewHolder>(DiffCallback()) {
 
-    class EventViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
+    inner class EventViewHolder(private val view: View) : RecyclerView.ViewHolder(view) {
         fun bind(event: Event) {
             view.findViewById<AppCompatTextView>(R.id.titleText).text = event.title
             view.findViewById<AppCompatTextView>(R.id.descriptionText).text = event.description
@@ -33,4 +42,4 @@ class EventAdapter(
     override fun onBindViewHolder(holder: EventViewHolder, position: Int) {
         holder.bind(getItem(position))
     }
-}*/
+}

@@ -1,11 +1,11 @@
-package com.eventplanner
+package com.eventplanner.viewmodel
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
 import com.eventplanner.room_db.DatabaseProvider
-import com.eventplanner.room_db.Event
+import com.eventplanner.model.Event
 import com.eventplanner.room_db.EventDao
 import kotlinx.coroutines.launch
 
@@ -14,7 +14,7 @@ class EventViewModel(application: Application) : AndroidViewModel(application) {
     private val eventDao: EventDao
 
     init {
-        val db = DatabaseProvider.getDatabase(application)
+        val db = DatabaseProvider.Companion.getDatabase(application)
         eventDao = db.eventDao()
         repository = EventRepository(eventDao)
     }
